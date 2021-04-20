@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        var cat = {
+            name: 'Fluffy',
+            activities: ['play', 'eat cat food'],
+            catFriends: [{
+                name: 'bar',
+                activities: ['be grumpy', 'eat bread omblet'],
+                weight: 8,
+                furcolor: 'white'
+            }, {
+                name: 'foo',
+                activities: ['sleep', 'pre - sleep naps'],
+                weight: 3
+            }]
+        }
+        cat.height = 10;
+        cat.weight = 4;
+        console.log("1.height=" + cat.height, "weight=" + cat.weight);
+        cat.name = 'Fluffyy';
+        console.log("2." + cat.name);
+
+        len = cat.catFriends.length;
+        for (var i = 0; i < len; i++) {
+            for (var j = 0; j < len; j++) {
+                console.log("3." + cat.catFriends[i].activities[j]);
+            }
+        }
+        for (var i = 0; i < len; i++) {
+            console.log("4." + cat.catFriends[i].name);
+        }
+
+
+        let sum = 0;
+        for (var i = 0; i < len; i++) {
+            sum += parseInt(cat.catFriends[i].weight);
+        }
+        console.log("5." + sum);
+        var str = "";
+        for (var i = 0; i < len; i++) {
+            str += cat.activities[i] + ":"
+            for (var j = 0; j < len; j++) {
+                str += cat.catFriends[i].activities[j] + ',';
+            }
+            str = str + '\n'
+        }
+        console.log("6." + str.trim())
+        cat.catFriends[0].activities.push('play');
+        cat.catFriends[0].activities.push('sleep');
+        cat.catFriends[1].activities.push('play');
+        cat.catFriends[1].activities.push('sleepwalk');
+        var str = "";
+        for (var i = 0; i < len; i++) {
+            str += cat.activities[i] + ":"
+            for (var j = 0; j < 4; j++) {
+                str += cat.catFriends[i].activities[j] + ',';
+            }
+            str = str + '\n'
+        }
+        console.log("7." + str)
+        cat.catFriends[0].furcolor = 'yellow';
+        console.log("8." + cat.catFriends[0].furcolor);
+
+        console.log(cat);
+    </script>
+</body>
+
+</html>

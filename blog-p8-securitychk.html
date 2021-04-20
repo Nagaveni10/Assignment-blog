@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        function chksecurityQuestions(securityQuestions, question) {
+            return (securityQuestions[0].expectedAnswer === ans)
+        }
+        var securityQuestions = [{
+            'question': 'What was your first pet’ s name ?',
+            'expectedAnswer': 'FlufferNutter'
+        }, {
+            'question': 'What was the model year of your first car ?',
+            'expectedAnswer': '1985'
+        }, {
+            'question': 'What city were you born in ?',
+            'expectedAnswer': 'NYC'
+        }]
+        var ans = 'FlufferNutter';
+        //ques = Object.keys(securityQuestions);
+        var status = chksecurityQuestions(securityQuestions, securityQuestions.question, ans);
+        console.log(ans, status);
+        var ans = 'DufferNutter';
+        var status = chksecurityQuestions(securityQuestions, securityQuestions.question, ans);
+        console.log(ans, status);
+    </script>
+</body>
+
+</html>

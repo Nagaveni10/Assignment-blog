@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        var myCar = {
+            make: 'Bugatti',
+            model: 'Bugatti La Voiture Noire',
+            year: 2019,
+            accidents: [{
+                date: '3/15/2019',
+                damage_points: '5000',
+                atFaultForAccident: true
+            }, {
+                date: '7/4/2022',
+                damage_points: '2200',
+                atFaultForAccident: true
+            }, {
+                date: '6/22/2021',
+                damage_points: '7900',
+                atFaultForAccident: true
+            }]
+        }
+        var len = myCar.accidents.length;
+        for (var i = 0; i < len; i++) {
+            var a = myCar.accidents[i].atFaultForAccident = "False";
+            console.log("1." + a);
+        }
+        for (var i = 0; i < len; i++) {
+            console.log("2." + myCar.accidents[i].date);
+        }
+        console.log(myCar);
+    </script>
+</body>
+
+</html>
